@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6F6B10918A7E568002B3092 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6B10818A7E568002B3092 /* Foundation.framework */; };
+		E6F6B10B18A7E568002B3092 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6B10A18A7E568002B3092 /* CoreGraphics.framework */; };
+		E6F6B10D18A7E568002B3092 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6B10C18A7E568002B3092 /* UIKit.framework */; };
+		E6F6B11318A7E568002B3092 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6F6B11118A7E568002B3092 /* InfoPlist.strings */; };
+		E6F6B11518A7E568002B3092 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6B11418A7E568002B3092 /* main.m */; };
+		E6F6B11918A7E568002B3092 /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6B11818A7E568002B3092 /* JBAppDelegate.m */; };
+		E6F6B11C18A7E568002B3092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F6B11A18A7E568002B3092 /* Main.storyboard */; };
+		E6F6B11F18A7E568002B3092 /* JBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6B11E18A7E568002B3092 /* JBViewController.m */; };
+		E6F6B12118A7E568002B3092 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F6B12018A7E568002B3092 /* Images.xcassets */; };
+		E6F6B12818A7E568002B3092 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6B12718A7E568002B3092 /* XCTest.framework */; };
+		E6F6B12918A7E568002B3092 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6B10818A7E568002B3092 /* Foundation.framework */; };
+		E6F6B12A18A7E568002B3092 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6B10C18A7E568002B3092 /* UIKit.framework */; };
+		E6F6B13218A7E568002B3092 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6F6B13018A7E568002B3092 /* InfoPlist.strings */; };
+		E6F6B13418A7E568002B3092 /* FlappyBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6B13318A7E568002B3092 /* FlappyBlockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6F6B12B18A7E568002B3092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F6B0FD18A7E568002B3092 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F6B10418A7E568002B3092;
+			remoteInfo = FlappyBlock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6F6B10518A7E568002B3092 /* FlappyBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F6B10818A7E568002B3092 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E6F6B10A18A7E568002B3092 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E6F6B10C18A7E568002B3092 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E6F6B11018A7E568002B3092 /* FlappyBlock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlappyBlock-Info.plist"; sourceTree = "<group>"; };
+		E6F6B11218A7E568002B3092 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6F6B11418A7E568002B3092 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6F6B11618A7E568002B3092 /* FlappyBlock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlappyBlock-Prefix.pch"; sourceTree = "<group>"; };
+		E6F6B11718A7E568002B3092 /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
+		E6F6B11818A7E568002B3092 /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
+		E6F6B11B18A7E568002B3092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6F6B11D18A7E568002B3092 /* JBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBViewController.h; sourceTree = "<group>"; };
+		E6F6B11E18A7E568002B3092 /* JBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBViewController.m; sourceTree = "<group>"; };
+		E6F6B12018A7E568002B3092 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E6F6B12618A7E568002B3092 /* FlappyBlockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBlockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F6B12718A7E568002B3092 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E6F6B12F18A7E568002B3092 /* FlappyBlockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlappyBlockTests-Info.plist"; sourceTree = "<group>"; };
+		E6F6B13118A7E568002B3092 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6F6B13318A7E568002B3092 /* FlappyBlockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlappyBlockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6F6B10218A7E568002B3092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F6B10B18A7E568002B3092 /* CoreGraphics.framework in Frameworks */,
+				E6F6B10D18A7E568002B3092 /* UIKit.framework in Frameworks */,
+				E6F6B10918A7E568002B3092 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F6B12318A7E568002B3092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F6B12818A7E568002B3092 /* XCTest.framework in Frameworks */,
+				E6F6B12A18A7E568002B3092 /* UIKit.framework in Frameworks */,
+				E6F6B12918A7E568002B3092 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6F6B0FC18A7E568002B3092 = {
+			isa = PBXGroup;
+			children = (
+				E6F6B10E18A7E568002B3092 /* FlappyBlock */,
+				E6F6B12D18A7E568002B3092 /* FlappyBlockTests */,
+				E6F6B10718A7E568002B3092 /* Frameworks */,
+				E6F6B10618A7E568002B3092 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6F6B10618A7E568002B3092 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6B10518A7E568002B3092 /* FlappyBlock.app */,
+				E6F6B12618A7E568002B3092 /* FlappyBlockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6F6B10718A7E568002B3092 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6B10818A7E568002B3092 /* Foundation.framework */,
+				E6F6B10A18A7E568002B3092 /* CoreGraphics.framework */,
+				E6F6B10C18A7E568002B3092 /* UIKit.framework */,
+				E6F6B12718A7E568002B3092 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6F6B10E18A7E568002B3092 /* FlappyBlock */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6B11718A7E568002B3092 /* JBAppDelegate.h */,
+				E6F6B11818A7E568002B3092 /* JBAppDelegate.m */,
+				E6F6B11A18A7E568002B3092 /* Main.storyboard */,
+				E6F6B11D18A7E568002B3092 /* JBViewController.h */,
+				E6F6B11E18A7E568002B3092 /* JBViewController.m */,
+				E6F6B12018A7E568002B3092 /* Images.xcassets */,
+				E6F6B10F18A7E568002B3092 /* Supporting Files */,
+			);
+			path = FlappyBlock;
+			sourceTree = "<group>";
+		};
+		E6F6B10F18A7E568002B3092 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6B11018A7E568002B3092 /* FlappyBlock-Info.plist */,
+				E6F6B11118A7E568002B3092 /* InfoPlist.strings */,
+				E6F6B11418A7E568002B3092 /* main.m */,
+				E6F6B11618A7E568002B3092 /* FlappyBlock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6F6B12D18A7E568002B3092 /* FlappyBlockTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6B13318A7E568002B3092 /* FlappyBlockTests.m */,
+				E6F6B12E18A7E568002B3092 /* Supporting Files */,
+			);
+			path = FlappyBlockTests;
+			sourceTree = "<group>";
+		};
+		E6F6B12E18A7E568002B3092 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6B12F18A7E568002B3092 /* FlappyBlockTests-Info.plist */,
+				E6F6B13018A7E568002B3092 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6F6B10418A7E568002B3092 /* FlappyBlock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F6B13718A7E568002B3092 /* Build configuration list for PBXNativeTarget "FlappyBlock" */;
+			buildPhases = (
+				E6F6B10118A7E568002B3092 /* Sources */,
+				E6F6B10218A7E568002B3092 /* Frameworks */,
+				E6F6B10318A7E568002B3092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlappyBlock;
+			productName = FlappyBlock;
+			productReference = E6F6B10518A7E568002B3092 /* FlappyBlock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6F6B12518A7E568002B3092 /* FlappyBlockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F6B13A18A7E568002B3092 /* Build configuration list for PBXNativeTarget "FlappyBlockTests" */;
+			buildPhases = (
+				E6F6B12218A7E568002B3092 /* Sources */,
+				E6F6B12318A7E568002B3092 /* Frameworks */,
+				E6F6B12418A7E568002B3092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F6B12C18A7E568002B3092 /* PBXTargetDependency */,
+			);
+			name = FlappyBlockTests;
+			productName = FlappyBlockTests;
+			productReference = E6F6B12618A7E568002B3092 /* FlappyBlockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6F6B0FD18A7E568002B3092 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = joeblau;
+				TargetAttributes = {
+					E6F6B12518A7E568002B3092 = {
+						TestTargetID = E6F6B10418A7E568002B3092;
+					};
+				};
+			};
+			buildConfigurationList = E6F6B10018A7E568002B3092 /* Build configuration list for PBXProject "FlappyBlock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6F6B0FC18A7E568002B3092;
+			productRefGroup = E6F6B10618A7E568002B3092 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6F6B10418A7E568002B3092 /* FlappyBlock */,
+				E6F6B12518A7E568002B3092 /* FlappyBlockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6F6B10318A7E568002B3092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F6B12118A7E568002B3092 /* Images.xcassets in Resources */,
+				E6F6B11318A7E568002B3092 /* InfoPlist.strings in Resources */,
+				E6F6B11C18A7E568002B3092 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F6B12418A7E568002B3092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F6B13218A7E568002B3092 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6F6B10118A7E568002B3092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F6B11918A7E568002B3092 /* JBAppDelegate.m in Sources */,
+				E6F6B11F18A7E568002B3092 /* JBViewController.m in Sources */,
+				E6F6B11518A7E568002B3092 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F6B12218A7E568002B3092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F6B13418A7E568002B3092 /* FlappyBlockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6F6B12C18A7E568002B3092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F6B10418A7E568002B3092 /* FlappyBlock */;
+			targetProxy = E6F6B12B18A7E568002B3092 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6F6B11118A7E568002B3092 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6F6B11218A7E568002B3092 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E6F6B11A18A7E568002B3092 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6F6B11B18A7E568002B3092 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6F6B13018A7E568002B3092 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6F6B13118A7E568002B3092 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6F6B13518A7E568002B3092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E6F6B13618A7E568002B3092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6F6B13818A7E568002B3092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlappyBlock/FlappyBlock-Prefix.pch";
+				INFOPLIST_FILE = "FlappyBlock/FlappyBlock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E6F6B13918A7E568002B3092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlappyBlock/FlappyBlock-Prefix.pch";
+				INFOPLIST_FILE = "FlappyBlock/FlappyBlock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E6F6B13B18A7E568002B3092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlappyBlock.app/FlappyBlock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlappyBlock/FlappyBlock-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FlappyBlockTests/FlappyBlockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E6F6B13C18A7E568002B3092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlappyBlock.app/FlappyBlock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlappyBlock/FlappyBlock-Prefix.pch";
+				INFOPLIST_FILE = "FlappyBlockTests/FlappyBlockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6F6B10018A7E568002B3092 /* Build configuration list for PBXProject "FlappyBlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F6B13518A7E568002B3092 /* Debug */,
+				E6F6B13618A7E568002B3092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F6B13718A7E568002B3092 /* Build configuration list for PBXNativeTarget "FlappyBlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F6B13818A7E568002B3092 /* Debug */,
+				E6F6B13918A7E568002B3092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E6F6B13A18A7E568002B3092 /* Build configuration list for PBXNativeTarget "FlappyBlockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F6B13B18A7E568002B3092 /* Debug */,
+				E6F6B13C18A7E568002B3092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6F6B0FD18A7E568002B3092 /* Project object */;
+}
