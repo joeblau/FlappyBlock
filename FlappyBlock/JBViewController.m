@@ -30,10 +30,14 @@
   UIPushBehavior *movePipes;
   int points2x;
   int lastYOffset;
+  UIAlertView *gameOver;
+  
+  Boolean firstFlap;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  firstFlap = NO;
   // Create Block Animator
   blockAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
   
@@ -41,9 +45,8 @@
   blockDynamicProperties.allowsRotation = NO;
   blockDynamicProperties.density = 1000;
   
-  // Block gravity
-  gravity = [[UIGravityBehavior alloc] initWithItems:@[self.block]];
-  gravity.magnitude = 1.1;
+
+  
   
   // Block flap behavior
   flapUp = [[UIPushBehavior alloc] initWithItems:@[self.block] mode:UIPushBehaviorModeInstantaneous];
@@ -60,7 +63,7 @@
   groundCollision.collisionDelegate = self;
   
   [blockAnimator addBehavior:blockDynamicProperties];
-  [blockAnimator addBehavior:gravity];
+
   [blockAnimator addBehavior:flapUp];
   [blockAnimator addBehavior:blockCollision];
   [blockAnimator addBehavior:groundCollision];
@@ -68,7 +71,6 @@
   // Create Pipes Animator
   points2x = 0;
   lastYOffset = -100;
-  [self generatePipesAndMove:DEFAULT_OFFSET];
   
   UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTapGesture:)];
   [self.view addGestureRecognizer:singleTapGestureRecognizer];
@@ -76,6 +78,16 @@
 }
 
 - (void) handleSingleTapGesture:(UITapGestureRecognizer *)gestureRecognizer {
+  if (!firstFlap) {
+    // Block gravity
+    gravity = [[UIGravityBehavior alloc] initWithItems:@[self.block]];
+    gravity.magnitude = 1.1;
+    [blockAnimator addBehavior:gravity];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+      if (!gameOver.isHidden)[self generatePipesAndMove:DEFAULT_OFFSET];
+    });
+    firstFlap = YES;
+  }
   [flapUp setActive:YES];
 }
 
@@ -125,7 +137,7 @@ int myRandom() {
 
 - (void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item1 withItem:(id<UIDynamicItem>)item2 atPoint:(CGPoint)p {
   [blockAnimator removeAllBehaviors];
-  UIAlertView *gameOver = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"You Lose" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+  gameOver = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"You Lose" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
   [gameOver show];
 }
 

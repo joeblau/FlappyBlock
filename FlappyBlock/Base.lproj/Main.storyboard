@@ -17,15 +17,15 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="0.22352942824363708" green="0.60000002384185791" blue="0.84705889225006104" alpha="0.20999999999999999" colorSpace="deviceRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" id="VPj-EC-90e">
+                                <rect key="frame" x="47" y="231" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9450981021" green="0.76862752440000004" blue="0.17254902420000001" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" id="cuy-AA-lVX">
                                 <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84705889225006104" green="0.7450980544090271" blue="0.5372549295425415" alpha="1" colorSpace="deviceRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="VPj-EC-90e">
-                                <rect key="frame" x="63" y="260" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9450981021" green="0.76862752440000004" blue="0.17254902420000001" alpha="1" colorSpace="deviceRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
