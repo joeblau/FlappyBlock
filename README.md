@@ -9,7 +9,12 @@ when you lose you have to quit the game which adds an extra level of annoyance.
 to an already annoying game. This was made only as an excercise for using the 
 physics engine. Good luck and have fun.
 
+## Detailed Explanation
+
+[http://blog.joeblau.com/flappy-block](http://blog.joeblau.com/flappy-block)
+
 ## Screenshot
+
 ![Flappy Block](https://raw.github.com/joeblau/FlappyBlock/master/flappy-block.gif "Flappy Block iOS7")
 
 ## License
