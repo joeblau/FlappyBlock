@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JBViewController : UIViewController
+@interface JBViewController : UIViewController <UICollisionBehaviorDelegate>
+@property (strong, nonatomic) IBOutlet UIView *block;
+@property (strong, nonatomic) IBOutlet UIView *ground;
+@property (strong, nonatomic) IBOutlet UIView *sky;
 
 @end
