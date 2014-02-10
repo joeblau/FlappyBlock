@@ -128,4 +128,8 @@ int myRandom() {
   UIAlertView *gameOver = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"You Lose" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
   [gameOver show];
 }
+
+- (BOOL)shouldAutorotate {
+  return NO;
+}
 @end
