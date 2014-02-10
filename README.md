@@ -10,7 +10,7 @@ to an already annoying game. This was made only as an excercise for using the
 physics engine. Good luck and have fun.
 
 ## Screenshot
-![Flappy Block](https://raw.github.com/joeblau/FlappyBlock/master/flappy-block.png "Flappy Block iOS7")
+![Flappy Block](https://raw.github.com/joeblau/FlappyBlock/master/flappy-block.gif "Flappy Block iOS7")
 
 ## License
 
