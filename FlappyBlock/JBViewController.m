@@ -23,6 +23,7 @@
   
   UICollisionBehavior *blockCollision;
   UICollisionBehavior *groundCollision;
+  UICollisionBehavior *outerSpaceCollision;
   UIDynamicItemBehavior *blockDynamicProperties;
   UIDynamicItemBehavior *pipesDynamicProperties;
   UIGravityBehavior *gravity;
@@ -41,7 +42,7 @@
   // Create Block Animator
   blockAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
   
-  blockDynamicProperties = [[UIDynamicItemBehavior alloc] initWithItems:@[self.ground]];
+  blockDynamicProperties = [[UIDynamicItemBehavior alloc] initWithItems:@[self.ground, self.outerSpace]];
   blockDynamicProperties.allowsRotation = NO;
   blockDynamicProperties.density = 1000;
   
@@ -62,11 +63,16 @@
   groundCollision = [[UICollisionBehavior alloc] initWithItems:@[self.block, self.ground]];
   groundCollision.collisionDelegate = self;
   
+  // Block Outer Space Collision
+  outerSpaceCollision = [[UICollisionBehavior alloc] initWithItems:@[self.block, self.outerSpace]];
+  outerSpaceCollision.collisionDelegate = self;
+    
   [blockAnimator addBehavior:blockDynamicProperties];
 
   [blockAnimator addBehavior:flapUp];
   [blockAnimator addBehavior:blockCollision];
   [blockAnimator addBehavior:groundCollision];
+  [blockAnimator addBehavior:outerSpaceCollision];
   
   // Create Pipes Animator
   points2x = 0;
@@ -136,9 +142,11 @@ int myRandom() {
 }
 
 - (void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item1 withItem:(id<UIDynamicItem>)item2 atPoint:(CGPoint)p {
-  [blockAnimator removeAllBehaviors];
-  gameOver = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"You Lose" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
-  [gameOver show];
+  if (((UIView *)item1).tag != 2014 && ((UIView *)item2).tag != 2014) {
+    [blockAnimator removeAllBehaviors];
+    gameOver = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"You Lose" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    [gameOver show];
+  }
 }
 
 - (BOOL)shouldAutorotate {

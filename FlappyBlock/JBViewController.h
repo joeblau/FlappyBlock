@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIView *block;
 @property (strong, nonatomic) IBOutlet UIView *ground;
 @property (strong, nonatomic) IBOutlet UIView *sky;
+@property (strong, nonatomic) IBOutlet UIView *outerSpace;
 
 @end
