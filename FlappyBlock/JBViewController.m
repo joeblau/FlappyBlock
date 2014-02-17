@@ -20,18 +20,19 @@
 @implementation JBViewController {
   UIView *pipeBounds;
   UIDynamicAnimator *blockAnimator;
-  
+
   UICollisionBehavior *blockCollision;
   UICollisionBehavior *groundCollision;
-  UIDynamicItemBehavior *blockDynamicProperties;
+  UIDynamicItemBehavior *groundDynamicProperties;
   UIDynamicItemBehavior *pipesDynamicProperties;
+  UIDynamicItemBehavior *blockDynamicProperties;
   UIGravityBehavior *gravity;
   UIPushBehavior *flapUp;
   UIPushBehavior *movePipes;
   int points2x;
   int lastYOffset;
   UIAlertView *gameOver;
-  
+
   Boolean firstFlap;
 }
 
@@ -40,38 +41,39 @@
   firstFlap = NO;
   // Create Block Animator
   blockAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-  
-  blockDynamicProperties = [[UIDynamicItemBehavior alloc] initWithItems:@[self.ground]];
-  blockDynamicProperties.allowsRotation = NO;
-  blockDynamicProperties.density = 1000;
-  
 
-  
-  
+  groundDynamicProperties = [[UIDynamicItemBehavior alloc] initWithItems:@[self.ground]];
+  groundDynamicProperties.allowsRotation = NO;
+  groundDynamicProperties.density = 1000;
+
+  blockDynamicProperties = [[UIDynamicItemBehavior alloc] initWithItems:@[self.block]];
+
   // Block flap behavior
   flapUp = [[UIPushBehavior alloc] initWithItems:@[self.block] mode:UIPushBehaviorModeInstantaneous];
-  flapUp.pushDirection = CGVectorMake(0, -1.1);
+  flapUp.pushDirection = CGVectorMake(0, -0.75);
   flapUp.active = NO;
-  
+
   // Block Pipe Collision
   blockCollision = [[UICollisionBehavior alloc] initWithItems:@[self.block]];
   [blockCollision addBoundaryWithIdentifier:@"LEFT_WALL" fromPoint:CGPointMake(-1*PIPE_WIDTH, 0) toPoint:CGPointMake(-1*PIPE_WIDTH, self.view.bounds.size.height)];
   blockCollision.collisionDelegate = self;
-  
+
   // Block Ground Collision
   groundCollision = [[UICollisionBehavior alloc] initWithItems:@[self.block, self.ground]];
   groundCollision.collisionDelegate = self;
-  
+
+  [blockAnimator addBehavior:groundDynamicProperties];
   [blockAnimator addBehavior:blockDynamicProperties];
+
 
   [blockAnimator addBehavior:flapUp];
   [blockAnimator addBehavior:blockCollision];
   [blockAnimator addBehavior:groundCollision];
-  
+
   // Create Pipes Animator
   points2x = 0;
   lastYOffset = -100;
-  
+
   UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTapGesture:)];
   [self.view addGestureRecognizer:singleTapGestureRecognizer];
   [singleTapGestureRecognizer setNumberOfTapsRequired:1];
@@ -88,18 +90,25 @@
     });
     firstFlap = YES;
   }
+
+  // Reset the velocity
+  CGPoint v = [blockDynamicProperties linearVelocityForItem:self.block];
+  v.y = -v.y;
+  [blockDynamicProperties addLinearVelocity:v forItem:self.block];
+
   [flapUp setActive:YES];
+
 }
 
 - (void)generatePipesAndMove:(float)xOffset {
   lastYOffset = lastYOffset +  (arc4random_uniform(3)*40) * myRandom();
   lastYOffset = (lastYOffset < -200)?-200:lastYOffset;
   lastYOffset = (lastYOffset > 0)?0:lastYOffset;
-  
+
   UIView *topPipe = [[UIView alloc] initWithFrame:CGRectMake(xOffset, lastYOffset, PIPE_WIDTH, 300)];
   [topPipe setRestorationIdentifier:@"TOP"];
   [topPipe setBackgroundColor:NEPHRITIS];
-  
+
   [self.view addSubview:topPipe];
   UIView *bottomPipe = [[UIView alloc] initWithFrame:CGRectMake(xOffset, lastYOffset+topPipe.bounds.size.height+PIPE_SPACE, PIPE_WIDTH, 300)];
   [bottomPipe setRestorationIdentifier:@"BOTTOM"];
@@ -109,7 +118,7 @@
   pipesDynamicProperties= [[UIDynamicItemBehavior alloc] initWithItems:@[topPipe, bottomPipe]];
   pipesDynamicProperties.allowsRotation = NO;
   pipesDynamicProperties.density = 1000;
-  
+
   [blockCollision addItem:topPipe];
   [blockCollision addItem:bottomPipe];
 
